@@ -6,8 +6,7 @@ public class Pupil extends Educated {
 
 	
 	//////////////////////////////  CONSTRUCTOR  //////////////////////////////
-	public Pupil() {
-	}
+	public Pupil() {}
 
 	public Pupil(String fullName, String schoolName, int age, float averageGrade, int level) {
 		
@@ -36,6 +35,7 @@ public class Pupil extends Educated {
 	}
 	
 	public void setAge(int age) {
+		
 		if (age >= 6 && age <= 20)
 			super.setAge(age);
 		else
