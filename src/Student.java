@@ -1,5 +1,5 @@
 
-public class Student extends Educated{
+public class Student extends Pupil{
 	
 	// PROPERTIES
 	private String universityName;
@@ -10,9 +10,10 @@ public class Student extends Educated{
 	public Student() {}
 	
 	public Student(String fullName, String universityName, String speciality, int age, float averageGrade, int level) {
-		super(fullName, age, averageGrade, level);
+		super(fullName, null, age, averageGrade, level);
 		setSpeciality(speciality);
 		setUniversityName(universityName);
+		setDegreeType("Student");
 	}
 
 	
@@ -36,23 +37,17 @@ public class Student extends Educated{
 	}
 	
 	public void setLevel(int level) {
-		if (level >= 1 && level <= 7)
-			super.setLevel(level);
-		else
-			printErrValue("LEVEL", 1, 7);
+			super.setLevel(level, 1, 7);
 	}
 	
 	public void setAge(int age) {
-		if (age >= 19 && age <= 30)
-			super.setAge(age);
-		else
-			printErrValue("AGE", 19, 30);
+		super.setAge(age, 19, 30);
 	}
 	
 	
 	// PRINT - OUTPUT
 	public void printInfo() {
-		printInfo(2, getUniversityName(), getSpeciality());
+		printInfo(getDegreeType(), getUniversityName(), getSpeciality());
 		
 	}
 }

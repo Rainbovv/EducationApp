@@ -6,12 +6,13 @@ public class Pupil extends Educated {
 
 	
 	//////////////////////////////  CONSTRUCTOR  //////////////////////////////
-	public Pupil() {}
+	public Pupil() {
+	}
 
-	public Pupil(String fullName, String schoolName, int age, float averageGrade, int level) {
-		
+	public Pupil(String fullName, String schoolName, int age, float averageGrade, int level) {		
 		super(fullName, age, averageGrade, level);
 		setSchoolName(schoolName);
+		setDegreeType("Pupil");
 	}
 
 	
@@ -26,24 +27,33 @@ public class Pupil extends Educated {
 	
 	
 	//////////////////////////////// SETTERS  ////////////////////////////////
-	public void setLevel (int level) {		
-		if (level >= 1 && level <= 12)
+	public void setLevel(int level){
+		setLevel(level, 1, 12);
+	}
+	
+	public void setLevel (int level, int minLevel, int maxLevel) {
+		
+		if (level >= minLevel && level <= maxLevel)
 			super.setLevel(level);
+		
 		else
-			printErrValue("CLASS", 1, 12);
+			super.printErrValue("CLASS", minLevel, maxLevel);
 	}
 	
-	public void setAge(int age) {		
-		if (age >= 6 && age <= 20)
+	public void setAge(int age) {
+		setAge(age,6,20);
+	}
+	
+	public void setAge(int age, int minAge, int maxAge) {
+		if (minAge <= age && age <= maxAge) 
 			super.setAge(age);
-		else
-			printErrValue("AGE", 6, 20);
+		else 
+			super.printErrValue("AGE", minAge, maxAge);
 	}
-	
+		
 	
 	// PRINT - OUTPUT
 	public void printInfo() {
-		super.printInfo(1,"","");
-		System.out.println("\nSchool: " + schoolName);
+		super.printInfo(getDegreeType(), schoolName, "");
 	}
 }
