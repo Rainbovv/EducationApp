@@ -46,8 +46,7 @@ public class Educated {
 		this.age = (byte)age;
 	}
 
-	public void setAverageGrade(float averageGrade) {
-		
+	public void setAverageGrade(float averageGrade) {		
 		if (averageGrade >= 1.00 && averageGrade <= 10.00)
 			this.averageGrade = averageGrade;
 		else
@@ -65,20 +64,16 @@ public class Educated {
 		System.out.println();
 	}
 	
-	protected void printInfo(int type, String universityName, String speciality) {
-		
+	protected void printInfo(int type, String universityName, String speciality) {		
 		System.out.printf("%nFull Name: %s (%d years)%n", 
 				   fullName, age);
 		
-		switch (type) {
-			
+		switch (type) {			
 			case 3: 
-				System.out.print("Master's Degree ");				
-			
+				System.out.print("Master's Degree ");							
 			case 2:
 				System.out.print("Year: " + level);
-				break;
-			
+				break;			
 			default:			
 				System.out.print("Class: " + level);
 		}
@@ -90,9 +85,9 @@ public class Educated {
 					   universityName, speciality);
 	}	
 
-	protected void printErrValue(String variable, int minValue, int maxValue) {
-		
-		System.err.printf("%nUNACCEPTABLE VALUE FOR %s!%nPlease enter a value from the range %d - %d%n",
+	protected void printErrValue(String variable, int minValue, int maxValue) {		
+		System.err.printf("%nUNACCEPTABLE VALUE FOR %s!%n"+
+				  "Please enter a value from the range %d - %d%n",
 				   variable, minValue, maxValue);
 	}
 }
