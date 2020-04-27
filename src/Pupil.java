@@ -26,16 +26,14 @@ public class Pupil extends Educated {
 	
 	
 	//////////////////////////////// SETTERS  ////////////////////////////////
-	public void setLevel (int level) {
-		
+	public void setLevel (int level) {		
 		if (level >= 1 && level <= 12)
 			super.setLevel(level);
 		else
 			printErrValue("CLASS", 1, 12);
 	}
 	
-	public void setAge(int age) {
-		
+	public void setAge(int age) {		
 		if (age >= 6 && age <= 20)
 			super.setAge(age);
 		else
