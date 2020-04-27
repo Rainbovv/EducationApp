@@ -37,7 +37,7 @@ public class Student extends Pupil{
 	}
 	
 	public void setLevel(int level) {
-			super.setLevel(level, 1, 7);
+		super.setLevel(level, 1, 7);
 	}
 	
 	public void setAge(int age) {
