@@ -47,7 +47,6 @@ public class Student extends Pupil{
 	
 	// PRINT - OUTPUT
 	public void printInfo() {
-		printInfo(getDegreeType(), getUniversityName(), getSpeciality());
-		
+		printInfo(getDegreeType(), getUniversityName(), getSpeciality());		
 	}
 }
