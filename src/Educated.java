@@ -99,7 +99,6 @@ public class Educated {
 	}	
 
 	protected void printErrValue(String property, int minValue, int maxValue) {
-
 		System.err.printf("%nUNACCEPTABLE VALUE FOR %s!%n"+
  		   		  "Enter a value from the range %d - %d%n",
 				   property, minValue, maxValue);
