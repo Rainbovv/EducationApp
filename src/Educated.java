@@ -67,7 +67,7 @@ public class Educated {
 	}
 
 	public void setLevel(int level) {				
-			this.level = (byte)level;		
+		this.level = (byte)level;		
 	}
 	
 	
@@ -76,10 +76,9 @@ public class Educated {
 		printInfo(degreeType, "", "");
 	}
 	
-	protected void printInfo(String degreeType, String institutionName, String speciality) {
-		
+	protected void printInfo(String degreeType, String institutionName, String speciality) {		
 		System.out.printf("Full Name: %s (%d years)%n", 
-						   fullName, age);
+				   fullName, age);
 		
 		switch (degreeType) {			
 			case "Master": 
@@ -87,24 +86,22 @@ public class Educated {
 			
 			case "Student":
 				System.out.printf("University: %s%nSpeciality: %s%n", 
-				   		   		   institutionName, speciality);
+				   		   institutionName, speciality);
 				break;
 			
 			case "Pupil":		
 				System.out.printf("School: %s%n", institutionName);
-				
-				
+								
 		}
 		System.out.printf("Level: %s%n", level);
 		System.out.printf("Grade: %.2f%n", averageGrade);
 		System.out.println();
 	}	
 
-	public void printErrValue(String property, int minValue, int maxValue) {
+	protected void printErrValue(String property, int minValue, int maxValue) {
 
 		System.err.printf("%nUNACCEPTABLE VALUE FOR %s!%n"+
- 		   		   		  "Enter a value from the range %d - %d%n",
-						   property, minValue, maxValue);
+ 		   		  "Enter a value from the range %d - %d%n",
+				   property, minValue, maxValue);
 	}
 }
-
